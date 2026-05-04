@@ -24,6 +24,18 @@ Org-wide rules live in this repo's own [`CONTRIBUTING.md`](./CONTRIBUTING.md). R
 
 3. **Don't commit `TODO.md` or `LEARNINGS.md`.** They're gitignored on purpose for this public repo. If you need to track something visible to the org, put it in an issue, not these files.
 
+## Git commit rules
+
+When committing changes, create **separate commits per file**. Do NOT bundle multiple file changes into a single commit. Each file gets its own commit with a descriptive message specific to that file's changes.
+
+For example, if `README.md`, `CONTRIBUTING.md`, and `repo-skeleton/CLAUDE.md` all changed:
+
+1. `git add README.md` → commit with a README-specific message
+2. `git add CONTRIBUTING.md` → commit with a CONTRIBUTING-specific message
+3. `git add repo-skeleton/CLAUDE.md` → commit with a skeleton-specific message
+
+This keeps git history clean and makes individual changes easy to review, revert, or cherry-pick.
+
 ## Quick orientation
 
 | Path | What it is |
