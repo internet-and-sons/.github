@@ -13,10 +13,12 @@ This file is auto-loaded as project context whenever Claude Code is opened in th
 runs it, what other repos (if any) it depends on or feeds into, and
 whether it's public or private.}}
 
-## Companion files (read as the task warrants)
+## Companion files
+
+Read the companion files below before any task that touches the area they cover (`CONTRIBUTING.md` for any change; `TODO.md` if continuing in-flight work; `LEARNINGS.md` before editing areas with prior gotchas).
 
 - **`CONTRIBUTING.md`** — read before any change. Setup, version-bumping flow (if applicable), what NOT to change without coordination.
-- **`TODO.md`** — pending work, deferred decisions, done log. Read when continuing in-flight work or scoping new tasks.
+- **`TODO.md`** — pending work, deferred decisions, done log. Read when continuing in-flight work or scoping new tasks. When you hit a non-obvious gotcha worth saving, append it to `LEARNINGS.md` before moving on.
 - **`LEARNINGS.md`** — non-obvious gotchas. Read before editing the parts of the repo where past gotchas have lived.
 
 Org-wide rules live in [`internet-and-sons/.github/CONTRIBUTING.md`](https://github.com/internet-and-sons/.github/blob/main/CONTRIBUTING.md). Read that once when you join the org; it covers branching, PRs, and the merge policy that applies to every repo here.
@@ -38,6 +40,8 @@ Org-wide rules live in [`internet-and-sons/.github/CONTRIBUTING.md`](https://git
 
 1. **Every change goes through a PR.** No direct pushes to `main`. See [`internet-and-sons/.github/CONTRIBUTING.md`](https://github.com/internet-and-sons/.github/blob/main/CONTRIBUTING.md) for the full policy.
 
+2. **When creating a new repo (any org), copy `repo-skeleton/` before adding project content.** Land the skeleton via PR — the no-direct-push-to-main rule (#1) applies from commit one.
+
 {{Add repo-specific hard rules here as they emerge.}}
 
 ## Working agreements
@@ -50,7 +54,7 @@ How AI agents (Claude Code, etc.) and humans should collaborate in this repo:
 - **Run tests after every change, fix failures before moving on.** Don't pile change on top of a broken state.
 - **Atomic commits.** For documentation changes (`.md`, `.txt`, `.csv`, etc.) — one commit per file. For code changes that span multiple files but represent one logical change — one commit per logical change. Either way, no giant catch-all commits.
 - **PRs are batched commits, reviewed as a whole.** A PR collects related work into a reviewable unit. **Ask before opening a PR** — don't open one autonomously, even if you think the work is done.
-- **When unsure between two approaches, explain both and let the human choose.** Don't silently pick. Lay out the tradeoffs.
+- **Never silently choose between two viable approaches.** Lay out the tradeoffs and wait for the human to pick.
 
 ## Quick orientation
 
